@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin | Aryan Patel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+<main class="login" id="login">
+<h1>Admin login</h1>
+<form id="loginForm" class="form" style="grid-template-columns:1fr">
+<label>Email<input id="email" type="email" autocomplete="username" required></label>
+<label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+<button class="btn solid" type="submit">Log in</button>
+<div class="err" id="loginErr" role="alert"></div>
+</form>
+</main>
+<div class="shell" id="app" hidden>
+<aside class="side">
+<div class="logo">ARYAN PATEL<small>ADMIN PANEL</small></div>
+<nav aria-label="Admin"><button data-view="certs" class="active" type="button">Certificates</button><button data-view="skills" type="button">Skills</button><button data-view="profile" type="button">Profile</button></nav>
+<button class="icon" id="themeBtn" type="button" style="background:#0a0a0a;color:#fff;border-color:#fff"></button>
+<button class="out" id="logout" type="button">Log out</button>
+</aside>
+<div class="main">
+<div id="msg" role="status"></div>
+<section class="view" id="v-certs">
+<div class="label">Dashboard</div><h1>Manage certificates</h1>
+<form class="box form" id="cForm">
+<label>Certificate name<input id="cName" required placeholder="Python for Data Science"></label>
+<label>Issuer<input id="cIssuer" required placeholder="Coursera"></label>
+<label>Year<input id="cYear" required placeholder="2026" inputmode="numeric"></label>
+<label>Certificate link (URL)<input id="cUrl" type="url" required placeholder="https://"></label>
+<label class="full">Image link (URL, optional)<input id="cImg" type="url" placeholder="https://"></label>
+<div class="full"><button class="btn solid" id="cSubmit" type="submit">Add certificate</button> <button class="btn" id="cCancel" type="button" hidden>Cancel</button></div>
+</form>
+<div class="bar"><input id="cSearch" type="search" aria-label="Search certificates" placeholder="Search certificates" style="max-width:260px"><span class="muted" id="cCount"></span></div>
+<table><thead><tr><th>NAME</th><th>ISSUER</th><th>YEAR</th><th>ACTIONS</th></tr></thead><tbody id="cRows"></tbody></table>
+<div class="pager"><span id="cInfo"></span><span><button class="btn sm" id="cPrev" type="button">Previous</button> <button class="btn sm" id="cNext" type="button">Next</button></span></div>
+</section>
+<section class="view" id="v-skills" hidden>
+<div class="label">Dashboard</div><h1>Manage skills</h1>
+<form class="box form" id="sForm">
+<label>Skill name<input id="sName" required placeholder="Python"></label>
+<label>Category<select id="sCat"><option>Languages</option><option>AI &amp; Data</option><option>Fundamentals</option></select></label>
+<div class="full"><button class="btn solid" id="sSubmit" type="submit">Add skill</button> <button class="btn" id="sCancel" type="button" hidden>Cancel</button></div>
+</form>
+<table><thead><tr><th>SKILL</th><th>CATEGORY</th><th>ACTIONS</th></tr></thead><tbody id="sRows"></tbody></table>
+</section>
+<section class="view" id="v-profile" hidden>
+<div class="label">Dashboard</div><h1>Profile</h1>
+<form class="box form" id="pForm">
+<label class="full">About<textarea id="pAbout"></textarea></label>
+<label class="full">Hero intro<textarea id="pIntro"></textarea></label>
+<label>Email<input id="pEmail" type="email"></label>
+<label>LinkedIn link<input id="pLinkedin" type="url" placeholder="https://"></label>
+<label>GitHub link<input id="pGithub" type="url" placeholder="https://"></label>
+<div class="full"><button class="btn solid" type="submit">Save profile</button></div>
+</form>
+</section>
+</div>
+</div>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
