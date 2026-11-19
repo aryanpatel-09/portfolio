@@ -65,3 +65,4 @@ td{padding:14px 8px 14px 0;border-top:1px solid var(--soft)}td:last-child{white-
 .login h1{margin:0;font-size:32px}
 @media(max-width:900px){.wrap{padding:0 24px}.hero h1{font-size:44px}.links a:not(.btn){display:none}.grid3,.cards,.form{grid-template-columns:1fr}.shell{flex-direction:column}.side{width:100%;padding:16px;gap:12px}.side nav{flex-direction:row;flex-wrap:wrap}.side .out{margin-top:0}.main{padding:24px 16px}.contact .col{text-align:left}.contact h2{font-size:34px}table{display:block;overflow-x:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
+[hidden] { display: none !important; }
